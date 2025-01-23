@@ -143,3 +143,7 @@ p {
 #show-player-button.hidden {
     display: none;
 }
+
+#end {
+    font-weight: bold;
+}
