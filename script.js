@@ -9,7 +9,8 @@ const showPlayerButton = document.getElementById('show-player-button');
 const musicList = [
     'music1.mp3',
     'music2.mp3',
-    'music3.mp3'
+    'music3.mp3',
+    'music4.mp3'
 ];
 
 let currentTrackIndex = 0;
