@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página com Flores e Música</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="background"></div>
@@ -52,7 +53,7 @@
     </div>
 
     <!-- Player de Música -->
-    <div class="music-player">
+    <div class="music-player" id="music-player">
         <audio id="audio-player" controls>
             Seu navegador não suporta o elemento de áudio.
         </audio>
@@ -60,7 +61,13 @@
             <button id="prev-button">Anterior</button>
             <button id="play-pause-button">Play</button>
             <button id="next-button">Próxima</button>
+            <button id="toggle-player">Esconder</button>
         </div>
+    </div>
+
+    <!-- Ícone/Botão flutuante para mostrar o player -->
+    <div id="show-player-button" class="hidden">
+        <i class="fas fa-music"></i> <!-- Ícone de música -->
     </div>
 
     <script src="script.js"></script>

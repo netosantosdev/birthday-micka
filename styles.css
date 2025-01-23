@@ -77,7 +77,7 @@ p {
 
 .music-player {
     position: fixed;
-    bottom: 20px; /* Distância da parte inferior da tela */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.8);
@@ -85,12 +85,18 @@ p {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 2;
-    width: 90%; /* Largura do player */
-    max-width: 400px; /* Largura máxima */
+    width: 90%;
+    max-width: 400px;
+    transition: opacity 0.3s, visibility 0.3s; /* Adiciona transição suave */
+}
+
+.music-player.hidden {
+    opacity: 0; /* Torna o player transparente */
+    visibility: hidden; /* Esconde o player */
 }
 
 .music-player audio {
-    width: 100%; /* Ocupa toda a largura do player */
+    width: 100%;
     margin-bottom: 10px;
 }
 
@@ -112,4 +118,28 @@ p {
 
 .music-player button:hover {
     background-color: #ff1493;
+}
+
+/* Estilo do botão flutuante */
+#show-player-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff69b4;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3; /* Garante que fique acima de outros elementos */
+    transition: background-color 0.3s;
+}
+
+#show-player-button:hover {
+    background-color: #ff1493;
+}
+
+/* Esconde o botão flutuante por padrão */
+#show-player-button.hidden {
+    display: none;
 }
